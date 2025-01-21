@@ -46,7 +46,7 @@ async function FeaturedProducts() {
   await delay(1000);
   const wixClient = getWixClient();
   const { collection } = await wixClient.collections.getCollectionBySlug(
-    "featured-products"
+    "featured"
   );
   if (!collection?._id) {
     return null;
@@ -65,7 +65,7 @@ async function FeaturedProducts() {
   return (
     <div className="space-y-5">
       <h2 className="text-2xl font-bold">Featured Products</h2>
-      <div className="flex flex-col sm:grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 ">
+      <div className="flex flex-col gap-5 sm:grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 ">
         {featuredProducts.items.map((product) => (
           <Product key={product._id} product={product} />
         ))}
