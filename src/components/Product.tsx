@@ -53,7 +53,7 @@ function getFormattedPrice(product: products.Product) {
     return (
       product.priceData?.formatted?.discountedPrice ||
       product.priceData?.formatted?.price ||
-      "n.a"
+      "n/a"
     );
   }
 }
