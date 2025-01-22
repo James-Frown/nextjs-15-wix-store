@@ -15,7 +15,7 @@ export default function Product({ product }: ProductProps) {
   const mainImage = product.media?.mainMedia?.image;
 
   return (
-    <Link className="border h-full" href={`/products/${product.slug}`}>
+    <Link className="border h-full bg-card" href={`/products/${product.slug}`}>
       <div className="relative overflow-hidden">
         <WixImage
           className="transition-transform duration-300 hover:scale-110"
